@@ -22,7 +22,7 @@ if __name__ == '__main__':
     page_number = 1394
     index_number = 0
     photoName = ""
-    while page_number > 1393:
+    while page_number > 0:
         while index_number < 70:
             try:
                 # 定义爬虫目标网站地址，第一张图和第二张图及其之后URL地址格式不一
