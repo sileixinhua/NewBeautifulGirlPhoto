@@ -12,17 +12,14 @@
 
 import requests
 from bs4 import BeautifulSoup
-import socket
-
 
 if __name__ == '__main__':
     # photo的主地址
     photo_url = "http://m.xingmeng365.com/articles.asp?id="
-    # page_number = 1394
-    page_number = 1394
+    page_number = 1395
     index_number = 0
     photoName = ""
-    while page_number > 0:
+    while page_number > 1394:
         while index_number < 70:
             try:
                 # 定义爬虫目标网站地址，第一张图和第二张图及其之后URL地址格式不一
@@ -37,7 +34,7 @@ if __name__ == '__main__':
                 r.encoding = 'gb18030'
                 # 获得目标页面返回信息
                 # print(r.status_code)
-                # print(url)
+                print(url)
                 if r.status_code == 500:
                     break
                 if r.status_code == 200:
@@ -53,8 +50,6 @@ if __name__ == '__main__':
                         if str(link.get('src'))[:4] == 'http':
                             print(str(link.get('src')))
                             imageUrl = str(link.get('src'))
-                            # 设置超时
-                            socket.setdefaulttimeout(5.0)
                             # 下载图片到photo文件夹中
                             response = requests.get(imageUrl)
                             with open('./photo/' + photoName + str(page_number) + '_' + str(index_number) + '.jpg', 'wb') as f:
@@ -64,3 +59,4 @@ if __name__ == '__main__':
                 index_number = index_number + 1
                 print(e)
         page_number = page_number - 1
+        index_number = 0
