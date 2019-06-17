@@ -24,7 +24,17 @@ http://img.xingmeng365.com//upload/image/20190610/20190610212229842984.jpg
 
 初始下载点 page_number = XXX（暂停点）即可
 
+爬虫爬去的总数为近6万张美图，如下所示，近7G
+
+! [text ] ( https://github.com/sileixinhua/NewBeautifulGirlPhoto/blob/master/1.png?raw=true)
+
+粗略图
+
+! [text ] ( https://github.com/sileixinhua/NewBeautifulGirlPhoto/blob/master/2.png?raw=true)
+
+
 【第二部分】【TODO】MeiTuGAN
+
 
 
 
